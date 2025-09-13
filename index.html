@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>QA Automation Portfolio — Your Name</title>
+  <meta name="description" content="QA Automation Engineer portfolio: Selenium, Playwright, Appium, PyTest, CI/CD examples." />
+
+  <!-- Simple CSS (place this in styles.css if you prefer separate files) -->
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;margin:0;background:linear-gradient(180deg,#071023 0%, #071428 100%);color:#e6eef6}
+    .wrap{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center}
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042033}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+    .badge{background:rgba(255,255,255,0.05);padding:6px 10px;border-radius:999px;font-size:0.85rem;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
+    .card h2{margin-top:0}
+
+    .project{border-radius:8px;padding:12px;margin-bottom:10px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+    .project .meta{color:var(--muted);font-size:0.9rem}
+    a.cta{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#042033;font-weight:600;text-decoration:none}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    footer{color:var(--muted);margin-top:24px;font-size:0.9rem}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+    pre.snippet{background:#021024;padding:12px;border-radius:8px;color:#bfe3ff;overflow:auto}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="avatar">YA</div>
+      <div>
+        <h1>Your Name — QA Automation Engineer</h1>
+        <p class="lead">4+ years in QA & test automation. I build maintainable frameworks using Python, PyTest, Selenium, Playwright, Appium and integrate them with CI/CD (GitHub Actions) and reporting (Allure).</p>
+        <div class="badges">
+          <span class="badge">Python</span>
+          <span class="badge">Selenium</span>
+          <span class="badge">Playwright</span>
+          <span class="badge">Appium</span>
+          <span class="badge">PyTest</span>
+          <span class="badge">Allure</span>
+          <span class="badge">GitHub Actions</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid" style="margin-top:20px">
+      <div>
+        <div class="card">
+          <h2>Featured Projects</h2>
+          <div id="projects"></div>
+
+          <h3 style="margin-top:18px">Example: How to run tests</h3>
+          <pre class="snippet"># Run tests with pytest
+pytest tests/ --maxfail=1 -q
+
+# Generate Allure report
+allure serve ./allure-results</pre>
+
+          <h3 style="margin-top:14px">Repository tips</h3>
+          <ul style="color:var(--muted)">
+            <li>Include a README for each project explaining setup & running tests.</li>
+            <li>Add GitHub Actions workflow (.github/workflows) for CI test runs.</li>
+            <li>Attach sample test reports (Allure) or provide a link to a hosted report.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>Contact & Resume</h2>
+          <p class="meta">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+          <p class="meta">LinkedIn: <a href="#">linkedin.com/in/yourname</a></p>
+          <p style="margin-top:10px"><a class="cta" href="#" id="downloadResume">Download Resume</a></p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h2>Skills</h2>
+          <div class="skills" style="margin-top:8px">
+            <span class="badge">Test Automation</span>
+            <span class="badge">API Testing (requests)</span>
+            <span class="badge">Mobile Automation</span>
+            <span class="badge">CI/CD</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Reporting</span>
+          </div>
+
+          <h3 style="margin-top:14px">Quick links</h3>
+          <p class="meta"><a href="#">Source code</a> • <a href="#">Live demo</a> • <a href="#">Blog</a></p>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h2>Test Status</h2>
+          <p class="meta">(Placeholders — replace with real badges)</p>
+          <img alt="build passing" src="https://img.shields.io/badge/build-passing-brightgreen" style="margin-top:8px" />
+          <img alt="coverage" src="https://img.shields.io/badge/coverage-92%25-yellow" style="margin-top:8px" />
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <p>Pro tip: Commit this page as <code>index.html</code> at the root of your <code>username.github.io</code> repo and enable GitHub Pages from the repository settings.</p>
+    </footer>
+  </main>
+
+  <!-- Simple JS (place this in app.js if you prefer separate files) -->
+  <script>
+    // Sample project list - replace with your real projects (or fetch from GitHub API)
+    const projects = [
+      {name: 'Ecom-Automation', desc: 'Playwright + PyTest e2e framework, CI with GitHub Actions', url:'#'},
+      {name: 'Mobile-Automation', desc: 'Appium tests for Android & iOS', url:'#'},
+      {name: 'API-Test-Suite', desc: 'PyTest-based API tests with fixtures and parametrization', url:'#'}
+    ];
+
+    const projectsEl = document.getElementById('projects');
+    projects.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'project';
+      div.innerHTML = `<div>
+        <strong>${p.name}</strong>
+        <div class="meta">${p.desc}</div>
+      </div>
+      <div><a class="cta" href="${p.url}" target="_blank" rel="noopener">View</a></div>`;
+      projectsEl.appendChild(div);
+    });
+
+    // Resume download placeholder
+    document.getElementById('downloadResume').addEventListener('click', e => {
+      e.preventDefault();
+      alert('Replace this with a link to your resume PDF in the repo (e.g., /resume.pdf)');
+    });
+  </script>
+</body>
+</html>
