@@ -1,147 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>QA Automation Portfolio — Muhammad Ahsan</title>
-  <meta name="description" content="QA Automation Engineer portfolio: Selenium, Playwright, Appium, PyTest, CI/CD." />
-
-  <!-- Simple CSS (place this in styles.css if you prefer separate files) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ahsan — QA Automation Engineer</title>
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;margin:0;background:linear-gradient(180deg,#071023 0%, #071428 100%);color:#e6eef6}
-    .wrap{max-width:980px;margin:36px auto;padding:24px}
-    header{display:flex;gap:16px;align-items:center}
-    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#042033}
-    h1{margin:0;font-size:1.6rem}
-    p.lead{color:var(--muted);margin:6px 0 18px}
-
-    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-    .badge{background:rgba(255,255,255,0.05);padding:6px 10px;border-radius:999px;font-size:0.85rem;color:var(--muted)}
-
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
-    .card h2{margin-top:0}
-
-    .project{border-radius:8px;padding:12px;margin-bottom:10px;background:rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
-    .project .meta{color:var(--muted);font-size:0.9rem}
-    a.cta{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#042033;font-weight:600;text-decoration:none}
-
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    footer{color:var(--muted);margin-top:24px;font-size:0.9rem}
-
-    @media (max-width:880px){.grid{grid-template-columns:1fr}}
-    pre.snippet{background:#021024;padding:12px;border-radius:8px;color:#bfe3ff;overflow:auto}
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #0f172a;
+      --accent-color: #38bdf8;
+      --light-bg: #f1f5f9;
+      --gradient-bg: linear-gradient(135deg, #f0f9ff, #e0f2fe, #dbeafe);
+      --text-color: #1e293b;
+      --card-bg: #ffffffdd;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: var(--gradient-bg);
+      color: var(--text-color);
+    }
+    header {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: #fff;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    header p {
+      margin-top: 0.8rem;
+      font-size: 1.4rem;
+      color: #dbeafe;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--secondary-color);
+      margin-bottom: 2.5rem;
+      font-size: 2.3rem;
+      border-left: 6px solid var(--primary-color);
+      padding-left: 0.8rem;
+      font-weight: 700;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+    .skill-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .skill-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skill-card ul li {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 1rem;
+    }
+    .skill-card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    .project {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--secondary-color);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .project a:hover {
+      color: var(--accent-color);
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 0.7rem 1rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 1.15rem;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .contact a:hover {
+      color: var(--accent-color);
+      transform: scale(1.08);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary-color);
+      color: #cbd5e1;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <header>
-      <div class="avatar">MA</div>
-      <div>
-        <h1>Muhammad Ahsan — QA Automation Engineer</h1>
-        <p class="lead">8+ years in QA & test automation. I build maintainable frameworks using Python, PyTest, Selenium, Playwright, Appium and integrate them with CI/CD (GitHub Actions) and reporting (Allure).</p>
-        <div class="badges">
-          <span class="badge">Python</span>
-          <span class="badge">Selenium</span>
-          <span class="badge">Playwright</span>
-          <span class="badge">Appium</span>
-          <span class="badge">PyTest</span>
-          <span class="badge">Allure</span>
-          <span class="badge">GitHub Actions</span>
-          <span class="badge">Jenkins</span>
-          <span class="badge">Postman</span>
-          <span class="badge">Apache Jmeter</span>
-        </div>
+  <header>
+    <h1>Muhammad Ahsan</h1>
+    <p>QA Automation Engineer | Certified Python Developer</p>
+  </header>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming & Scripting</h3>
+        <ul>
+          <li>Python (Certified), Java, JavaScript</li>
+          <li>PyTest, Behave, Robot Framework, BDD/TDD approaches</li>
+          <li>REST API testing with Requests, Postman, RestAssured</li>
+        </ul>
       </div>
-    </header>
-
-    <section class="grid" style="margin-top:20px">
-      <div>
-        <div class="card">
-          <h2>Featured Projects</h2>
-          <div id="projects"></div>
-
-          <h3 style="margin-top:18px">Example: How to run tests</h3>
-          <pre class="snippet"># Run tests with pytest
-pytest tests/ --maxfail=1 -q
-
-# Generate Allure report
-allure serve ./allure-results</pre>
-
-          <h3 style="margin-top:14px">Repository tips</h3>
-          <ul style="color:var(--muted)">
-            <li>Include a README for each project explaining setup & running tests.</li>
-            <li>Add GitHub Actions workflow (.github/workflows) for CI test runs.</li>
-            <li>Attach sample test reports (Allure) or provide a link to a hosted report.</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top:18px">
-          <h2>Contact & Resume</h2>
-          <p class="meta">Email: <a href="mailto:ahsanattar133@gmail.com">ahsanattar133@gmail.com</a></p>
-          <p class="meta">LinkedIn: <a href="#">linkedin.com/in/muhammadahsan-automation/</a></p>
-          <p style="margin-top:10px"><a class="cta" href="/resume.pdf" id="downloadResume">Download Resume</a></p>
-        </div>
+      <div class="skill-card">
+        <h3>Automation</h3>
+        <ul>
+          <li>Web: Selenium WebDriver, Playwright, Cypress</li>
+          <li>Mobile: Appium (Android & iOS)</li>
+          <li>Cloud Testing: BrowserStack, Sauce Labs</li>
+          <li>IoT Testing: Minew devices (Bluetooth, RFID, Smart Labels)</li>
+        </ul>
       </div>
-
-      <aside>
-        <div class="card">
-          <h2>Skills</h2>
-          <div class="skills" style="margin-top:8px">
-            <span class="badge">Test Automation</span>
-            <span class="badge">API Testing (requests)</span>
-            <span class="badge">Mobile Automation</span>
-            <span class="badge">CI/CD</span>
-            <span class="badge">Docker</span>
-            <span class="badge">Reporting</span>
-          </div>
-
-          <h3 style="margin-top:14px">Quick links</h3>
-          <p class="meta"><a href="#">Source code</a> • <a href="#">Live demo</a> • <a href="#">Blog</a></p>
-        </div>
-
-        <div class="card" style="margin-top:18px">
-          <h2>Test Status</h2>
-          <p class="meta">(Placeholders — replace with real badges)</p>
-          <img alt="build passing" src="https://img.shields.io/badge/build-passing-brightgreen" style="margin-top:8px" />
-          <img alt="coverage" src="https://img.shields.io/badge/coverage-92%25-yellow" style="margin-top:8px" />
-        </div>
-      </aside>
-    </section>
-
-    <footer>
-      <p>Pro tip: Commit this page as <code>index.html</code> at the root of your <code>username.github.io</code> repo and enable GitHub Pages from the repository settings.</p>
-    </footer>
-  </main>
-
-  <!-- Simple JS (place this in app.js if you prefer separate files) -->
-  <script>
-    // Sample project list - replace with your real projects (or fetch from GitHub API)
-    const projects = [
-      {name: 'Web-Automation', desc: 'Playwright + PyTest e2e framework, CI with GitHub Actions', url:'#'},
-      {name: 'Mobile-Automation', desc: 'Appium tests for Android & iOS', url:'#'},
-      {name: 'API-Test-Suite', desc: 'PyTest-based API tests with fixtures and parametrization', url:'#'}
-    ];
-
-    const projectsEl = document.getElementById('projects');
-    projects.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'project';
-      div.innerHTML = `<div>
-        <strong>${p.name}</strong>
-        <div class="meta">${p.desc}</div>
+      <div class="skill-card">
+        <h3>Frameworks & Reporting</h3>
+        <ul>
+          <li>PyTest, JUnit, TestNG</li>
+          <li>Allure Reports, Extent Reports</li>
+        </ul>
       </div>
-      <div><a class="cta" href="${p.url}" target="_blank" rel="noopener">View</a></div>`;
-      projectsEl.appendChild(div);
-    });
+      <div class="skill-card">
+        <h3>Test Management</h3>
+        <ul>
+          <li>TestRail, Zephyr, Xray</li>
+          <li>JIRA, Confluence, Slack</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>CI/CD & DevOps</h3>
+        <ul>
+          <li>Git, GitHub, GitLab, Bitbucket</li>
+          <li>Jenkins, GitHub Actions, Bitbucket Pipelines</li>
+          <li>Docker, AWS EC2, Boto3</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    // Resume download placeholder
-    document.getElementById('downloadResume').addEventListener('click', e => {
-      e.preventDefault();
-      alert('Replace this with a link to your resume PDF in the repo (e.g., /resume.pdf)');
-    });
-  </script>
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Web Test Automation Framework</h3>
+        <p>Built a PyTest + Selenium framework with Allure reporting and integrated into GitHub Actions CI/CD.</p>
+        <a href="#">🔗 View Repository</a>
+      </div>
+      <div class="project">
+        <h3>Mobile App Testing with Appium</h3>
+        <p>Automated Android/iOS flows using Python + Appium, executed on BrowserStack with multi-device coverage.</p>
+        <a href="#">🔗 View Repository</a>
+      </div>
+      <div class="project">
+        <h3>API Automation</h3>
+        <p>Reusable API test suite using PyTest + Requests with JSON schema validation and token-based authentication.</p>
+        <a href="#">🔗 View Repository</a>
+      </div>
+      <div class="project">
+        <h3>IoT Device Testing (Minew)</h3>
+        <p>Automated testing of Bluetooth beacons & smart labels with Python scripts for connectivity & data validation.</p>
+        <a href="#">🔗 View Repository</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:ahsanattar133@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/muhammadahsan-automation/" target="_blank">💼 LinkedIn</a>
+      <a href="https://www.upwork.com/freelancers/~015129019ff5855109" target="_blank">💼 Upwork</a>
+      <a href="https://github.com/MAhsan133/" target="_blank">🌐 GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Muhammad Ahsan — QA Automation Engineer</p>
+  </footer>
 </body>
 </html>
