@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ahsan — QA Test Automation Engineer</title>
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #0f172a;
+      --accent-color: #38bdf8;
+      --light-bg: #f1f5f9;
+      --gradient-bg: linear-gradient(135deg, #f0f9ff, #e0f2fe, #dbeafe);
+      --text-color: #1e293b;
+      --card-bg: #ffffffdd;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: var(--gradient-bg);
+      color: var(--text-color);
+    }
+    header {
+      background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+      color: #fff;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    header p {
+      margin-top: 0.8rem;
+      font-size: 1.4rem;
+      color: #dbeafe;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: var(--secondary-color);
+      margin-bottom: 2.5rem;
+      font-size: 2.3rem;
+      border-left: 6px solid var(--primary-color);
+      padding-left: 0.8rem;
+      font-weight: 700;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+    .skill-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .skill-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skill-card ul li {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      font-size: 1rem;
+    }
+    .skill-card ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+    }
+    .project {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--secondary-color);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .project a:hover {
+      color: var(--accent-color);
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 0.7rem 1rem;
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 1.15rem;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .contact a:hover {
+      color: var(--accent-color);
+      transform: scale(1.08);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--secondary-color);
+      color: #cbd5e1;
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muhammad Ahsan</h1>
+    <p>QA Test Automation Engineer | Certified Python Developer</p>
+  </header>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming & Scripting</h3>
+        <ul>
+          <li>Python (Certified), JavaScript</li>
+          <li>PyTest, Behave, Robot Framework, BDD/TDD approaches</li>
+          <li>REST API testing with Requests, Postman</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Automation</h3>
+        <ul>
+          <li>Web: Selenium WebDriver, Playwright, Cypress</li>
+          <li>Mobile: Appium (Android & iOS)</li>
+          <li>Cloud Testing: BrowserStack</li>
+          <li>IoT Testing: Minew devices (Bluetooth, RFID, Smart Labels)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Test Management & Reporting</h3>
+        <ul>
+          <li>TestRail, Zephyr, Xray</li>
+          <li>JIRA, Confluence, Slack</li>
+          <li>Allure Reports</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>CI/CD & DevOps</h3>
+        <ul>
+          <li>Git, GitHub, GitLab, Bitbucket</li>
+          <li>Jenkins, GitHub Actions, Bitbucket Pipelines</li>
+          <li>Docker, AWS EC2, Boto3</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>QA Test Automation Framework</h3>
+        <p>Built (Selenium + Behave) framework for Web Automation (BDD) and (PyTest + Requests) framework for API Testing and integrated into GitHub Actions CI/CD.</p>
+        <a href="https://github.com/MAhsan133/QAAutomation">🔗 View Repository</a>
+      </div>
+      <div class="project">
+        <h3>API Automation</h3>
+        <p>Create API endpoints using Flask app and write API test suite using (PyTest + Requests) with JSON schema. Added load testing using Jmeter</p>
+        <a href="https://github.com/MAhsan133/flask_api_test_automation">🔗 View Repository</a>
+      </div>
+
+      <div class="project">
+        <h3>QA testing for the REST API (Upwork)</h3>
+        <p>Write API test suite using (PyTest + Requests) with JSON schema. Token based authentication</p>
+        <a href="https://www.upwork.com/jobs/~015954547ff8e59319">🔗 View Job Posted</a>
+      </div>
+      <div class="project">
+        <h3>QA Analyst for mobile and web applications</h3>
+        <p>Web automation using Python, Behave, Gherkin Language, Docker container, Bitbucket pipeline</p>
+        <a href="https://www.upwork.com/jobs/~010f83e5c8018e3e32">🔗 View Job Posted</a>
+      </div>
+
+      <div class="project">
+        <h3>Mobile App Testing with Appium</h3>
+        <p>Automated Android/iOS flows using Python + Appium, executed on BrowserStack with multi-device coverage.</p>
+      </div>
+      <div class="project">
+        <h3>IoT Device Testing (Minew)</h3>
+        <p>Automated testing of Bluetooth beacons & smart labels with Python scripts for connectivity & data validation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <a href="mailto:ahsanattar133@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/muhammadahsan-automation/" target="_blank">💼 LinkedIn</a>
+      <a href="https://www.upwork.com/freelancers/~015129019ff5855109" target="_blank">💼 Upwork</a>
+      <a href="https://github.com/MAhsan133/" target="_blank">🌐 GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Muhammad Ahsan — QA Automation Engineer</p>
+  </footer>
+</body>
+</html>
